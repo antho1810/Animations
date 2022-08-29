@@ -1,0 +1,101 @@
+* {
+ margin: 0;
+  box-sizing: border-box;
+}
+
+.box{
+    width: 200px;
+    height: 200px;
+    margin: 60px;
+    background-color: red;
+    animation-name: change-color;
+    /* animation-name: grow; */
+    animation-duration: 2s;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+    /* animation-direction:alternate; */
+    animation-fill-mode: forwards;
+    /* animation-fill-mode: backwards | both | forwards | none; */
+    /* animation-delay: 2s; */
+
+    animation: cambiar-color 1s linear infinite alternate both 2s running;
+}
+.box:hover{
+    animation-play-state: paused;
+}
+
+@keyframes change-color{
+    0%{
+        transform: translate(0);
+        background-color: aquamarine;
+    }
+    25%{
+        transform: translate(100%);
+        background-color: chocolate;
+    }
+    50%{
+        transform: translate(100%, 100%);
+        background-color: darkgoldenrod;
+    }
+    75%{
+        transform: translate(0, 100%);
+        background-color: darkred;
+    }
+    100%{
+        transform: translate(0);
+        background-color: cornflowerblue;
+
+    }
+
+/* from{
+width: 250px;
+background-color: aqua;
+}
+to{
+    width: 300px;
+    background-color: purple;
+} */
+}
+
+@keyframes grow{
+    0%{
+        transform: scaleX(1.5);
+    }
+    100%{
+        transform: scaleX(2.5);
+    }
+}
+
+.bell{
+    background-color: goldenrod;
+    width: 100px;
+    height: 100px;
+    margin: auto;
+    border-radius: 8px;
+    display: flex;
+}
+
+.bell__item{
+    margin: auto;
+    width: 80px;
+    animation: infinite campana 1s;
+}
+
+@keyframes campana {
+    0%{
+        transform: rotate(30deg);
+    }
+    25%{
+        transform: rotate(0deg);
+    }
+    50%{
+        transform: rotate(-30deg);
+    }
+    75%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(30deg);
+    }
+}
+
